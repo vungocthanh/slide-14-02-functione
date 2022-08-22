@@ -10,15 +10,15 @@
 <body>
 <script>
     var arr = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' ,' Regulus']
-    var arr1 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa' ,'Leo','Polaris']
+    var arr1 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra','Deneb', 'Aquila', 'Ursa' ,'Leo','Polaris','Aldebaran']
     var element =prompt('Nhập tên ngôi sao')
     function checkElement(element){
         for (var i = 0; i <= arr.length; i++) {
             if ( element == arr[i]){
                 var result1 = arr[i];
             }
-            return result1;
         }
+        return result1;
     }
     var result = ''
     result = checkElement(element);
