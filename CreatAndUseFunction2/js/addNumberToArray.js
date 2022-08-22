@@ -9,12 +9,12 @@ var temp = '';
 var j = arr.length -1;
 function reverse(arr){
     for ( i = 0 ; i < arr.length ; i++){
-
-        var j = arr.length -1;
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        j--;
+        if(i < j) {
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            j--;
+        }
     }
     return arr;
 }
