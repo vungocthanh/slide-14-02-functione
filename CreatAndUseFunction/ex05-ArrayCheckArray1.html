@@ -10,29 +10,21 @@
 <body>
 <script>
     var arr = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' ,' Regulus']
-    var arr1 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra','Deneb', 'Aquila', 'Ursa' ,'Leo','Polaris','Aldebaran']
+    var arr1 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa' ,'Leo',]
     var element =prompt('Nhập tên ngôi sao')
     function checkElement(element){
-        for (var i = 0; i <= arr.length; i++) {
-            if ( element == arr[i]){
-                var result1 = arr[i];
+        for (var i = 0; i <= arr1.length; i++) {
+            for ( var j = 0 ; j <= arr.length;j++){
+                if ( element == arr[j]){
+                    var idx = arr.indexOf(element);
+                }
+            }
+            if ( idx == i){
+                return arr1[i];
             }
         }
-        return result1;
     }
-    var result = ''
-    result = checkElement(element);
-    for (var j = 0; j <= arr1.length; j++) {
-        if (result == arr1[j]) {
-            var star = arr1[j];
-            var idx = arr1.indexOf(star);
-        }
-    }
-    if (idx > 0) {
-        alert("Tìm thấy tên ngôi sao " + star + " ở vị trí arr1["+idx+"]")
-    } else {
-        alert('Không sao')
-    }
+    document.write(checkElement(element));
 
 </script>
 </body>
